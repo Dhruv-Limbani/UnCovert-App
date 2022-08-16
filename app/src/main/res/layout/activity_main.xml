@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_frame_layout_padding"
+        app:layout_boxedEdges="all">
+
+        <ScrollView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content">
+
+
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checkedButton="@id/radioButton">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Other" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Age"
+                android:inputType="number" />
+
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Gender"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>
